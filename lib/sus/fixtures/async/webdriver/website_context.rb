@@ -1,3 +1,8 @@
+# frozen_string_literal: true
+
+# Released under the MIT License.
+# Copyright, 2023, by Samuel Williams.
+
 require 'async/webdriver'
 require 'async/webdriver/bridge/pool'
 
@@ -18,7 +23,7 @@ module Sus
 								end
 								
 								::Async::WebDriver::Bridge::Pool.start(
-									::Async::WebDriver::Bridge::Chrome.new
+									::Async::WebDriver::Bridge.default
 								)
 							end
 						end

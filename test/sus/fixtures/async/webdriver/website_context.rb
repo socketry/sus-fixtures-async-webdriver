@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+# Released under the MIT License.
+# Copyright, 2023, by Samuel Williams.
+
 require 'protocol/rack/adapter'
 require 'protocol/http/reference'
 require 'sus/fixtures/async/http/server_context'

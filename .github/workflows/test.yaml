@@ -45,6 +45,8 @@ jobs:
         ruby-version: ${{matrix.ruby}}
         bundler-cache: true
     
+    - uses: browser-actions/setup-chrome@v1
+    
     - name: Run tests
       timeout-minutes: 10
       run: bundle exec bake test

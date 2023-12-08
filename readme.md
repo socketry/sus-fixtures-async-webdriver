@@ -6,7 +6,7 @@ Provides test fixtures for [async-webdriver](https://github.com/socketry/async-w
 
 ## Usage
 
-Floop.
+See `examples/rack` for a full example.
 
 ## Contributing
 

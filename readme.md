@@ -8,6 +8,10 @@ Provides test fixtures for [async-webdriver](https://github.com/socketry/async-w
 
 See `examples/rack` for a full example.
 
+## See Also
+
+- [async-webdriver](https://github.com/socketry/async-webdriver) - Asynchronous WebDriver client used by this fixture.
+
 ## Contributing
 
 We welcome contributions to this project.

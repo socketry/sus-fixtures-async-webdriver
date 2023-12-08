@@ -1,12 +1,12 @@
 require 'sus/fixtures/async/http/server_context'
-require 'sus/fixtures/async/webdriver/website_context'
+require 'sus/fixtures/async/webdriver/session_context'
 
 require 'protocol/rack/adapter'
 require 'rack/builder'
 
 describe "my website" do
 	include Sus::Fixtures::Async::HTTP::ServerContext
-	include Sus::Fixtures::Async::WebDriver::WebsiteContext
+	include Sus::Fixtures::Async::WebDriver::SessionContext
 	
 	def middleware
 		Protocol::Rack::Adapter.new(app)

@@ -6,13 +6,13 @@
 require 'protocol/rack/adapter'
 require 'protocol/http/reference'
 require 'sus/fixtures/async/http/server_context'
-require 'sus/fixtures/async/webdriver/website_context'
+require 'sus/fixtures/async/webdriver/session_context'
 
 require 'async/webdriver'
 
-describe Sus::Fixtures::Async::WebDriver::WebsiteContext do	
+describe Sus::Fixtures::Async::WebDriver::SessionContext do
 	include Sus::Fixtures::Async::HTTP::ServerContext
-	include Sus::Fixtures::Async::WebDriver::WebsiteContext
+	include Sus::Fixtures::Async::WebDriver::SessionContext
 	
 	let(:app) do
 		proc do |request|

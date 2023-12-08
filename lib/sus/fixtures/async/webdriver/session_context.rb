@@ -10,7 +10,7 @@ module Sus
 	module Fixtures
 		module Async
 			module WebDriver
-				module WebsiteContext
+				module SessionContext
 					GUARD = Thread::Mutex.new
 					
 					def self.pool
@@ -18,11 +18,7 @@ module Sus
 						
 						GUARD.synchronize do
 							@pool ||= begin
-								at_exit do
-									@pool&.close
-								end
-								
-								::Async::WebDriver::Bridge::Pool.start(
+								::Async::WebDriver::Bridge::Pool.new(
 									::Async::WebDriver::Bridge.default
 								)
 							end
@@ -30,7 +26,7 @@ module Sus
 					end
 					
 					def session
-						@session ||= WebsiteContext.pool.session
+						@session ||= SessionContext.pool.session
 					end
 					
 					def before
@@ -41,7 +37,7 @@ module Sus
 					
 					def after
 						if @session
-							WebsiteContext.pool.reuse(@session)
+							SessionContext.pool.reuse(@session)
 							@session = nil
 						end
 						

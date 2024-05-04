@@ -10,6 +10,7 @@ module Sus
 	module Fixtures
 		module Async
 			module WebDriver
+				# The session context provides a way to manage the lifecycle of a WebDriver session.
 				module SessionContext
 					GUARD = Thread::Mutex.new
 					
@@ -25,6 +26,7 @@ module Sus
 						end
 					end
 					
+					# The current session, that represents the browser window.
 					def session
 						@session ||= SessionContext.pool.session
 					end
@@ -44,14 +46,20 @@ module Sus
 						super
 					end
 					
+					# Navigate to a specific path within the website.
+					# @parameter path [String] The path to navigate to.
 					def navigate_to(path)
 						session.navigate_to(URI.join(bound_url, path))
 					end
 					
+					# Find an element within the current session.
+					# @parameter locator [Hash] The locator to use to find the element.
 					def find_element(...)
 						session.find_element(::Async::WebDriver::Locator.wrap(...))
 					end
 					
+					# Find all elements matching the given locator.
+					# @parameter locator [Hash] The locator to use to find the elements.
 					def find_elements(...)
 						session.find_elements(::Async::WebDriver::Locator.wrap(...))
 					end
@@ -87,6 +95,7 @@ module Sus
 						end
 					end
 					
+					# Check if the current session has an element matching the given locator.
 					def have_element(...)
 						HaveElement.new(::Async::WebDriver::Locator.wrap(...))
 					end
@@ -106,6 +115,7 @@ module Sus
 						end
 					end
 					
+					# Check if an element has properties matching the given key-value pairs.
 					def have_properties(**properties)
 						predicates = properties.map do |key, value|
 							HaveProperty.new(key, value)

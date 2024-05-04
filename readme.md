@@ -6,7 +6,9 @@ Provides test fixtures for [async-webdriver](https://github.com/socketry/async-w
 
 ## Usage
 
-See `examples/rack` for a full example.
+Please see the [project documentation](https://socketry.github.io/sus-fixtures-async-webdriver/) for more details.
+
+  - [Getting Started](https://socketry.github.io/sus-fixtures-async-webdriver/guides/getting-started/index) - This guide is designed to help you get started with the `sus-fixtures-async-webdriver` gem.
 
 ## See Also
 

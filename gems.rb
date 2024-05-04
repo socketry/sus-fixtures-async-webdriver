@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 # Released under the MIT License.
-# Copyright, 2023, by Samuel Williams.
+# Copyright, 2023-2024, by Samuel Williams.
 
 source "https://rubygems.org"
 
 gemspec
 
-gem "async-webdriver"
+# gem "async-webdriver", path: "../async-webdriver"
 
 group :maintenance, optional: true do
 	gem "bake-modernize"

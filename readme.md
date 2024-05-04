@@ -10,7 +10,7 @@ See `examples/rack` for a full example.
 
 ## See Also
 
-- [async-webdriver](https://github.com/socketry/async-webdriver) - Asynchronous WebDriver client used by this fixture.
+  - [async-webdriver](https://github.com/socketry/async-webdriver) - Asynchronous WebDriver client used by this fixture.
 
 ## Contributing
 
@@ -28,4 +28,4 @@ This project uses the [Developer Certificate of Origin](https://developercertifi
 
 ### Contributor Covenant
 
-This project is governed by [Contributor Covenant](https://www.contributor-covenant.org/). All contributors and participants agree to abide by its terms.
+This project is governed by the [Contributor Covenant](https://www.contributor-covenant.org/). All contributors and participants agree to abide by its terms.

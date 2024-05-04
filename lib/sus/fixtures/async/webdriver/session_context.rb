@@ -26,9 +26,16 @@ module Sus
 						end
 					end
 					
+					def make_session
+						SessionContext.pool.session.tap do |session|
+							# 1 second timeout for implicit waits.
+							session.implicit_wait_timeout = 1000
+						end
+					end
+					
 					# The current session, that represents the browser window.
 					def session
-						@session ||= SessionContext.pool.session
+						@session ||= make_session
 					end
 					
 					def before

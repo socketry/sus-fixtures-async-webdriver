@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 run do
 	[200, {}, [<<-HTML]]

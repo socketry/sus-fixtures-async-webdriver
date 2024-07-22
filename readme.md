@@ -2,13 +2,13 @@
 
 Provides test fixtures for [async-webdriver](https://github.com/socketry/async-webdriver).
 
-[![Development Status](https://github.com/suspecting/sus-fixtures-async-webdriver/workflows/Test/badge.svg)](https://github.com/suspecting/sus-fixtures-async-webdriver/actions?workflow=Test)
+[![Development Status](https://github.com/socketry/sus-fixtures-async-webdriver/workflows/Test/badge.svg)](https://github.com/socketry/sus-fixtures-async-webdriver/actions?workflow=Test)
 
 ## Usage
 
-Please see the [project documentation](https://suspecting.github.io/sus-fixtures-async-webdriver/) for more details.
+Please see the [project documentation](https://socketry.github.io/sus-fixtures-async-webdriver/) for more details.
 
-  - [Getting Started](https://suspecting.github.io/sus-fixtures-async-webdriver/guides/getting-started/index) - This guide is designed to help you get started with the `sus-fixtures-async-webdriver` gem.
+  - [Getting Started](https://socketry.github.io/sus-fixtures-async-webdriver/guides/getting-started/index) - This guide is designed to help you get started with the `sus-fixtures-async-webdriver` gem.
 
 ## See Also
 

@@ -7,7 +7,7 @@ module Sus
 	module Fixtures
 		module Async
 			module WebDriver
-				VERSION = "0.1.2"
+				VERSION = "0.2.0"
 			end
 		end
 	end

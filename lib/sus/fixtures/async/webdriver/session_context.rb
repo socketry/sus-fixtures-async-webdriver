@@ -3,8 +3,8 @@
 # Released under the MIT License.
 # Copyright, 2023-2024, by Samuel Williams.
 
-require 'async/webdriver'
-require 'async/webdriver/bridge/pool'
+require "async/webdriver"
+require "async/webdriver/bridge/pool"
 
 module Sus
 	module Fixtures

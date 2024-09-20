@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
 # Released under the MIT License.
-# Copyright, 2023, by Samuel Williams.
+# Copyright, 2023-2024, by Samuel Williams.
 
-require 'protocol/rack/adapter'
-require 'protocol/http/reference'
-require 'sus/fixtures/async/http/server_context'
-require 'sus/fixtures/async/webdriver/session_context'
+require "protocol/rack/adapter"
+require "protocol/http/reference"
+require "sus/fixtures/async/http/server_context"
+require "sus/fixtures/async/webdriver/session_context"
 
-require 'async/webdriver'
+require "async/webdriver"
 
 describe Sus::Fixtures::Async::WebDriver::SessionContext do
 	include Sus::Fixtures::Async::HTTP::ServerContext

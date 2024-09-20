@@ -44,7 +44,7 @@ module Sus
 						@session = nil
 					end
 					
-					def after
+					def after(error = nil)
 						if @session
 							SessionContext.pool.reuse(@session)
 							@session = nil

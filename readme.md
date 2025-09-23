@@ -14,7 +14,7 @@ Please see the [project documentation](https://socketry.github.io/sus-fixtures-a
 
 Please see the [project releases](https://socketry.github.io/sus-fixtures-async-webdriver/releases/index) for all releases.
 
-### Unreleased
+### v0.3.0
 
   - Dump screenshot and HTML of the browser session on test failure for easier debugging.
 

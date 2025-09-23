@@ -10,6 +10,12 @@ Please see the [project documentation](https://socketry.github.io/sus-fixtures-a
 
   - [Getting Started](https://socketry.github.io/sus-fixtures-async-webdriver/guides/getting-started/index) - This guide is designed to help you get started with the `sus-fixtures-async-webdriver` gem.
 
+## Releases
+
+Please see the [project releases](https://socketry.github.io/sus-fixtures-async-webdriver/releases/index) for all releases.
+
+### Unreleased
+
 ## See Also
 
   - [async-webdriver](https://github.com/socketry/async-webdriver) - Asynchronous WebDriver client used by this fixture.

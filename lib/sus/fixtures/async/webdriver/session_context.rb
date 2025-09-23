@@ -5,6 +5,7 @@
 
 require "async/webdriver"
 require "async/webdriver/bridge/pool"
+require "fileutils"
 
 module Sus
 	module Fixtures
@@ -46,11 +47,46 @@ module Sus
 					
 					def after(error = nil)
 						if @session
+							# Capture debugging information if there was an error
+							if error
+								capture_debug_state(error)
+							end
+							
 							SessionContext.pool.reuse(@session)
 							@session = nil
 						end
 						
 						super
+					end
+					
+					private
+					
+					def capture_debug_state(error)
+						return unless @session
+						
+						begin
+							# Create debug directory if it doesn't exist
+							debug_dir = "tmp/debug"
+							::FileUtils.mkdir_p(debug_dir)
+							
+							timestamp = Time.now.strftime("%Y%m%d-%H%M%S")
+							test_name = self.class.name&.gsub("::", "-") || "unknown-test"
+							prefix = "#{test_name}-#{timestamp}"
+							
+							# Capture HTML source
+							html = @session.document_source
+							html_file = ::File.join(debug_dir, "#{prefix}.html")
+							::File.write(html_file, html)
+							
+							# Capture screenshot
+							screenshot_data = @session.screenshot
+							screenshot_file = ::File.join(debug_dir, "#{prefix}.png")
+							::File.binwrite(screenshot_file, screenshot_data)
+							
+							inform "🐛 Test failed, debug files captured: 📄 HTML: #{html_file} 📸 Screenshot: #{screenshot_file} ❌ Error: #{error.class.name}: #{error.message}"
+						rescue => debug_error
+							inform "⚠️ Failed to capture debug state: #{debug_error.class.name}: #{debug_error.message}"
+						end
 					end
 					
 					# Navigate to a specific path within the website.

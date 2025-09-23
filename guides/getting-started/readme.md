@@ -42,3 +42,18 @@ end
 ```
 
 See `examples/rack` for a full example.
+
+## Automatic Debugging
+
+When tests fail, the `SessionContext` automatically captures debugging information to help you understand what went wrong:
+
+- **HTML Source**: The current page DOM structure is saved to a timestamped `.html` file
+- **Screenshot**: A visual screenshot of the page is saved to a timestamped `.png` file
+
+Debug files are automatically saved to the `tmp/debug/` directory and named with the test class and timestamp (e.g., `tmp/debug/MyTestClass-20250923-143022.html`). When a test fails, you'll see output like:
+
+```
+🐛 Test failed, debug files captured: 📄 HTML: tmp/debug/MyTestClass-20250923-143022.html 📸 Screenshot: tmp/debug/MyTestClass-20250923-143022.png ❌ Error: NoSuchElementError: Element not found
+```
+
+This debugging information is captured automatically without any additional setup - just include the `SessionContext` fixture and it will handle debug capture on test failures.

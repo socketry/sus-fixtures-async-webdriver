@@ -16,6 +16,8 @@ Please see the [project releases](https://socketry.github.io/sus-fixtures-async-
 
 ### Unreleased
 
+  - Dump screenshot and HTML of the browser session on test failure for easier debugging.
+
 ## See Also
 
   - [async-webdriver](https://github.com/socketry/async-webdriver) - Asynchronous WebDriver client used by this fixture.
